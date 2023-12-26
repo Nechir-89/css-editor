@@ -1,10 +1,15 @@
 import './style.css'
 type Props = {}
 
-export default function Viewer({}: Props) {
+export default function Viewer({ }: Props) {
   return (
     <section className="view-container">
-      <p>Hello</p>
+      {/* type html code in this section */}
+      <div className="flex-container">
+        <div className='item'>Hello</div>
+        <div className='item'>Hey</div>
+        <div className='item'>Hi</div>
+      </div>
     </section>
   )
 }
