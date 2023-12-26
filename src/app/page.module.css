@@ -1,0 +1,19 @@
+.main{
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 48px;
+}
+
+div.wraper {
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.title {
+  margin-top: 24px;
+  margin-bottom: 16px;
+
+  min-width: 300px;
+  max-width: 400px;
+}

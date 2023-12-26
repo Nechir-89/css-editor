@@ -1,0 +1,11 @@
+.view-container{
+  background-color: var(--white);
+  min-width: 300px;
+  min-height: 300px;
+
+  max-width: 400px;
+  max-height: 450px;
+
+  padding: 24px;
+  border-radius: 8px 8px 0px 0px;
+}
