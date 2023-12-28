@@ -1,4 +1,5 @@
-// import Image from 'next/image'
+'use client'
+
 import Editor from './components/Editor/Editor'
 import Viewer from './components/Viewer/Viewer'
 import styles from './page.module.css'

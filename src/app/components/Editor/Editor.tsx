@@ -1,8 +1,13 @@
+'use client'
+
+import { useCssContext, ContextProps } from '../../Context/store'
 import './style.css';
 
 type Props = {}
 
 export default function Editor({ }: Props) {
+  // @ts-ignore
+  const { css, setCss } = useCssContext<ContextProps>();
   return (
     <section className="editor-container">
       <div className="header">
@@ -14,8 +19,8 @@ export default function Editor({ }: Props) {
         <button>run</button>
       </div>
       <div className="body">
-        <textarea>
-
+        <textarea onChange={(event) => setCss(event.target.value)}>
+          {css}
         </textarea>
       </div>
     </section>
