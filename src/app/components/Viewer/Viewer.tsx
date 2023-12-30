@@ -54,10 +54,6 @@ export default function Viewer({ }: Props) {
         <div className='item'>Hey</div>
         <div className='item'>Hi</div>
       </div>
-      <p>
-        {
-        }
-      </p>
     </section>
   )
 }
