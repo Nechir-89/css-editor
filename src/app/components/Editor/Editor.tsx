@@ -1,13 +1,16 @@
 'use client'
 
+import { useState } from 'react';
 import { useCssContext, ContextProps } from '../../Context/store'
 import './style.css';
 
 type Props = {}
 
 export default function Editor({ }: Props) {
-  // @ts-ignore
-  const { css, setCss } = useCssContext<ContextProps>();
+
+  const { setCss } = useCssContext();
+  const [cssCode, setCssCode] = useState<string>('');
+
   return (
     <section className="editor-container">
       <div className="header">
@@ -16,11 +19,11 @@ export default function Editor({ }: Props) {
           <span className="controll-button minmize-button"></span>
           <span className="controll-button maxmize-button"></span>
         </div>
-        <button>run</button>
+        <button onClick={() => setCss(cssCode)}>run</button>
       </div>
       <div className="body">
-        <textarea onChange={(event) => setCss(event.target.value)}>
-          {css}
+        <textarea onChange={(event) => setCssCode(event.target.value)}>
+          {cssCode}
         </textarea>
       </div>
     </section>
